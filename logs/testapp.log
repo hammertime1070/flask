@@ -1,0 +1,12 @@
+2020-06-25 12:17:39,404 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:22:03,688 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44

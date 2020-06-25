@@ -1,0 +1,118 @@
+2020-06-25 09:34:35,903 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 09:44:19,308 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 09:45:25,541 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 10:21:20,932 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 10:22:07,818 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 10:23:46,753 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 10:30:33,169 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 11:03:42,348 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 11:03:54,621 ERROR: Exception on /login [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mkeith\Python\flask\app\routes.py", line 35, in login
+    if user is None or not user.check_password(form.password.data):
+  File "C:\Users\mkeith\Python\flask\app\models.py", line 27, in check_password
+    return check_password_hash(self.password_hash, password)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\werkzeug\security.py", line 218, in check_password_hash
+    if pwhash.count("$") < 2:
+AttributeError: 'NoneType' object has no attribute 'count'
+2020-06-25 11:05:11,340 ERROR: Exception on /follow/susan [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 11:05:29,186 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:16:53,062 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-25 12:17:15,556 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:17:18,142 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:17:19,104 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:17:19,318 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:17:19,564 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2020-06-25 12:17:24,019 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
