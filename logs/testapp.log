@@ -1,12 +1,116 @@
-2020-06-25 12:17:39,404 ERROR: Exception on /follow/john [POST] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+2020-06-26 07:42:44,571 ERROR: Exception on /index [GET] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
 Traceback (most recent call last):
   File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1953, in full_dispatch_request
-    return self.finalize_request(rv)
-  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1968, in finalize_request
-    response = self.make_response(rv)
-  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2098, in make_response
-    "The view function did not return a valid response. The"
-TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
-2020-06-25 12:22:03,688 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\mkeith\Python\flask\app\routes.py", line 29, in index
+    return render_template('index.html', title='Home Page',form=form, posts=posts)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mkeith\Python\flask\app\templates\index.html", line 10, in template
+    {{ form.post(cols=32, rows=4 }}<br>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-06-26 07:44:48,751 ERROR: Exception on /explore [GET] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\mkeith\Python\flask\app\routes.py", line 144, in explore
+    return render_template('index.html', title='Explore', posts=posts)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mkeith\Python\flask\app\templates\index.html", line 10, in template
+    {{ form.post(cols=32, rows=4 }}<br>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-06-26 07:44:50,402 ERROR: Exception on /explore [GET] [in c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py:1892
+Traceback (most recent call last):
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\mkeith\Python\flask\app\routes.py", line 144, in explore
+    return render_template('index.html', title='Explore', posts=posts)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\mkeith\python\flask\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mkeith\Python\flask\app\templates\index.html", line 10, in template
+    {{ form.post(cols=32, rows=4 }}<br>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2020-06-26 07:45:31,658 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-26 07:55:24,998 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-26 08:05:54,819 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:44
+2020-06-26 09:36:44,220 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:48
+2020-06-26 09:46:17,495 INFO: Test App Startup [in C:\Users\mkeith\Python\flask\app\__init__.py:50
